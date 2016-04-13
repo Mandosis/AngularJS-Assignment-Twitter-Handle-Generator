@@ -1,10 +1,24 @@
-:<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html ng-app="twitterApp">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Twitter Stufs</title>
+    <script src="/vendor/angular/angular.min.js"></script>
+    <script src="/assets/scripts/client.min.js"></script>
+    <link rel="stylesheet" href="/assets/css/style.css" />
   </head>
-  <body>
+  <body ng-controller="twitterController">
+    <h1>Twitter Handle Generator</h1>
+    <button ng-click = "nameMaker()">Generate Handle</button>
 
+    <ul>
+      <li ng-repeat = "name in nameArray track by $index">
+        <input type="checkbox" ng-model = "check.available"/>
+        <a ng-href = "https://twitter.com/{{name.name}}" class = "{{check.available}}" target = "_blank">@{{name.name}}</a>
+        <!-- <input type="checkbox" ng-model = "styleOne"/>
+        <a ng-href = "https://twitter.com/{{name.name}}" ng-class = "styleOne" target = "_blank">{{name.name}}</a> -->
+
+      </li>
+    </ul>
   </body>
 </html>

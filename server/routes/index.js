@@ -1,10 +1,12 @@
 var express = require('express');
 var path = require('path');
+var nounList = require('../nouns');
+var adjList = require('../adjectives');
 
 var router = express.Router();
 
-var nouns = ['great'];
-var adjectives = ['name'];
+var nouns = nounList;
+var adjectives = adjList;
 
 router.get('/', function(request, response) {
   response.sendFile(path.join(__dirname, '../public/views/index.html'));

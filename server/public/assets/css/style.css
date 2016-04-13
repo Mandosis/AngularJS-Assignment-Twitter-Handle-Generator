@@ -1,0 +1,24 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+body {
+  background: #F5F5F5;
+  color: #333;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+a {
+  color: red;
+  text-decoration: none;
+}
+
+.true {
+    color: green;
+}
+
+ul {
+  text-align: left;
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  list-style-type:none;
+}

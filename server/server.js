@@ -1,10 +1,13 @@
 var express = require('express');
 var mongoose = require('mongoose');
+var bodyParser = require('body-parser');
 
 // Declare routes
 var index = require('./routes/index');
 
 var app = express();
+
+app.use(bodyParser.json());
 
 app.use(express.static('server/public'));
 
